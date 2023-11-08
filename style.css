@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Red Hat Display";
+  font-weight: 500;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+}
+footer {
+  position: absolute;
+  bottom: 60px;
+}
+
+main {
+  max-width: 450px;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.card-image {
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.card-body {
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px 50px;
+}
+
+.title {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+  font-size: 28px;
+  margin-top: 35px;
+}
+.description {
+  font-size: 16px;
+  color: hsl(224, 23%, 55%);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.subscription {
+  background-color: hsl(230, 75%, 98%);
+  box-sizing: border-box;
+  padding: 25px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.subscription .details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.subscription .details span:nth-child(1) {
+  font-weight: 900;
+}
+.subscription .details span:nth-child(2) {
+  color: hsl(224, 23%, 55%);
+  font-size: 17px;
+}
+
+.subscription .change {
+  margin-left: auto;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+
+.submit {
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 5px 20px hsla(245, 75%, 52%, 40%);
+}
+
+.submit:hover {
+  background-color: hsl(245, 83%, 68%);
+  cursor: pointer;
+  box-shadow: hsla(245, 83%, 68%, 40%);
+}
+.cancel {
+  background-color: hsl(0, 0%, 100%);
+}
+.cancel {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  main {
+    max-width: 90%;
+    max-height: fit-content;
+  }
+  .card-body {
+    padding: 0px 30px;
+  }
+  .description {
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .subscription {
+    padding: 15px 10px;
+    gap: 24px;
+    margin-bottom: 25px;
+  }
+  .subscription .details,
+  .subscription .change {
+    font-size: 15px;
+  }
+  .subscription .details span:nth-child(2) {
+    font-size: 15px;
+  }
+}
