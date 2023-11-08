@@ -22,6 +22,7 @@ body {
   background-image: url("images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: contain;
   position: relative;
 }
 footer {
@@ -37,17 +38,21 @@ main {
   overflow: hidden;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  box-shadow: 0 4px 110px hsl(224, 23%, 75%);
 }
 
 .card-image {
   overflow: hidden;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  margin-bottom: -2px;
 }
+
 .card-image img {
   max-height: 100%;
   max-width: 100%;
 }
+
 .card-body {
   overflow: hidden;
   background-color: hsl(0, 0%, 100%);
@@ -61,6 +66,7 @@ main {
   font-size: 28px;
   margin-top: 35px;
 }
+
 .description {
   font-size: 16px;
   color: hsl(224, 23%, 55%);
@@ -71,11 +77,11 @@ main {
 .subscription {
   background-color: hsl(230, 75%, 98%);
   box-sizing: border-box;
-  padding: 25px 20px;
+  padding: 25px 25px;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   margin-bottom: 35px;
 }
 
@@ -84,15 +90,18 @@ main {
   flex-direction: column;
   gap: 6px;
 }
+
 .subscription .details span:nth-child(1) {
   font-weight: 900;
 }
+
 .subscription .details span:nth-child(2) {
   color: hsl(224, 23%, 55%);
   font-size: 17px;
 }
 
 .subscription .change {
+  font-size: 15px;
   margin-left: auto;
   color: hsl(245, 75%, 52%);
   font-weight: 700;
@@ -108,7 +117,7 @@ button {
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
-
+  word-spacing: 3px;
   margin-bottom: 20px;
 }
 
@@ -123,9 +132,13 @@ button {
   cursor: pointer;
   box-shadow: hsla(245, 83%, 68%, 40%);
 }
+
 .cancel {
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
   background-color: hsl(0, 0%, 100%);
 }
+
 .cancel {
   cursor: pointer;
 }
@@ -135,23 +148,32 @@ button {
     max-width: 90%;
     max-height: fit-content;
   }
+
+  .card-image {
+    margin-bottom: -4px;
+  }
+
   .card-body {
     padding: 0px 30px;
   }
+
   .description {
     margin-bottom: 20px;
     margin-left: 5px;
     margin-right: 5px;
   }
+
   .subscription {
     padding: 15px 10px;
     gap: 24px;
     margin-bottom: 25px;
   }
+
   .subscription .details,
   .subscription .change {
     font-size: 15px;
   }
+
   .subscription .details span:nth-child(2) {
     font-size: 15px;
   }
